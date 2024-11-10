@@ -1,0 +1,39 @@
+<div class="about-section">
+  <div class="container">
+    <div class="wraper">
+      <div class="hilight big"></div>
+      <h1>Announcements</h1>
+    </div>
+    <p class="description">
+      Stay updated with the latest announcements. We prioritize keeping our clients informed.
+    </p>
+
+    <!-- Announcement List -->
+    <div class="about-content">
+      <div
+        class="about-item"
+        *ngFor="let announcement of announcements">
+        <div class="wraper">
+          <div class="hilight"></div>
+          <h2>{{ announcement.title }}</h2>
+        </div>
+        <p>{{ announcement.content }}</p>
+        <img
+          *ngIf="announcement.imageUrl"
+          [src]="announcement.imageUrl"
+          alt="Announcement Image"
+          class="announcement-image"
+        />
+        <!-- Buttons placed below the content -->
+        <div>
+          <button (click)="likeAnnouncement(announcement)">
+            Like ({{ announcement.likes }})
+          </button>
+          <button (click)="shareAnnouncement(announcement)">
+            Share
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

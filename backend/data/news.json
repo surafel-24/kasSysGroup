@@ -1,0 +1,19 @@
+[
+    {
+      "id": 1,
+      "title": "Market trends on the rise",
+      "content": "The market has shown a steady increase...",
+      "imageUrl": "/images/market.jpg",
+      "likes": 10,
+      "comments": ["Interesting insights!", "Good article."]
+    },
+    {
+      "id": 2,
+      "title": "Weather Update",
+      "content": "Storms are expected this weekend...",
+      "imageUrl": "/images/weather.jpg",
+      "likes": 5,
+      "comments": ["Stay safe!", "Thanks for the update."]
+    }
+  ]
+  

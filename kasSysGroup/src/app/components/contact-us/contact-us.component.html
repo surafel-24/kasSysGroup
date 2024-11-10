@@ -1,0 +1,67 @@
+<div id="contact-us" class="contact-us-container">
+  <!-- Contact Info Section -->
+  <div class="info-section">
+    <div class="wraper">
+      <div class="hilight"></div>
+      <h2>CONTACT US</h2>
+    </div>
+    <p class="discription">
+      Discover how Kassys Group, Inc. can transform your IT operations and
+      drive measurable results. Contact us KasSys® Group Inc.
+    </p>
+    <ul class="contact-info">
+      <li>
+        <div class="icon-circle">
+          <img src="../../../assets/phone-call.png" alt="Phone Icon" />
+        </div>
+        <span>TEL: (703) 854-1033</span>
+      </li>
+      <li>
+        <div class="icon-circle">
+          <img src="../../../assets/mail.png" alt="Email Icon" />
+        </div>
+        <span>E-MAIL: contact&#64;KasSys®group.com</span>
+      </li>
+      <li>
+        <div class="icon-circle">
+          <img src="../../../assets/fax.png" alt="Fax Icon" />
+        </div>
+        <span>Fax: (703) 991-4573</span>
+      </li>
+      <li>
+        <div class="icon-circle">
+          <img src="../../../assets/location.png" alt="Location Icon" />
+        </div>
+        <span>
+          8230 Boone Blvd. Suite 210 Vienna, VA 22182
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Contact Form Section -->
+  <div class="form-section">
+    <div class="contact-card">
+      <h2>Get in Touch</h2>
+      <form (submit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" [(ngModel)]="name" placeholder="Enter your name" required />
+        </div>
+      
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" [(ngModel)]="email" placeholder="Enter your email" required />
+        </div>
+      
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" [(ngModel)]="message" rows="5" placeholder="Enter your message" required></textarea>
+        </div>
+      
+        <button type="submit" class="btn">Submit</button>
+      </form>
+      
+    </div>
+  </div>
+</div>

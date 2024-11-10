@@ -1,0 +1,230 @@
+<div class="service-container">
+  <div class="dropdown-section">
+    <div class="dropdown">
+      <ul class="dropdown-content">
+        <li>
+          <a (click)="showContent('software')"
+            >Software & Systems Development</a
+          >
+        </li>
+        <li>
+          <a (click)="showContent('database')">Database Support Services</a>
+        </li>
+        <li>
+          <a (click)="showContent('gis')"
+            >Geographic Information Systems (GIS) Services</a
+          >
+        </li>
+        <li>
+          <a (click)="showContent('web')">Web Design & Software Development</a>
+        </li>
+        <li>
+          <a (click)="showContent('cloud')">Cloud Computing Services</a>
+        </li>
+        <li>
+          <a (click)="showContent('bigdata')">Big Data & Analytics</a>
+        </li>
+        <li>
+          <a (click)="showContent('project')">Project Management</a>
+        </li>
+        <li>
+          <a (click)="showContent('training')">Technical Training Services</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div
+      *ngIf="currentSection === 'software'"
+      id="software"
+      class="content-item"
+    >
+    <div class="wraper">
+      <div class="hilight"></div>
+      <h2>Software & Systems Development</h2>
+    </div>
+      <p>
+        For over a decade, Kassys Group has developed transformative software
+        and system solutions for a diverse range of industries. We specialize
+        in:
+      </p>
+      <ul>
+        <li>Custom and Commercial off-the-Shelf (COTS) solutions</li>
+        <li>Multi-tier architectures, J2EE, and .NET frameworks</li>
+        <li>Systems integration, optimization, and performance tuning</li>
+        <li>
+          Mission-critical application support for Solaris, HP-UX, AIX, Linux,
+          and Windows platforms
+        </li>
+      </ul>
+      <p>
+        Our experts use a systematic approach that supports end-to-end
+        solutions, from initial concept to deployment and ongoing support. We
+        ensure seamless integration across various platforms, improving both
+        productivity and return on investment.
+      </p>
+    </div>
+    <div
+      *ngIf="currentSection === 'database'"
+      id="database"
+      class="content-item"
+    >
+    <div class="wraper">
+      <div class="hilight"></div>
+      <h2>Database Support Services</h2>
+    </div>
+      <p>
+        As a core service, our database support capabilities are extensive,
+        encompassing:
+      </p>
+      <ul>
+        <li>
+          Design, administration, and tuning for Oracle, DB2, Sybase, and MS SQL
+          databases
+        </li>
+        <li>Data warehousing, modeling, and business intelligence solutions</li>
+        <li>
+          Automated and streamlined database management for high availability
+          and operational efficiency
+        </li>
+      </ul>
+      <p>
+        We ensure your database architecture is optimized for performance and
+        scalability, reducing administrative burden while maximizing data
+        reliability.
+      </p>
+    </div>
+    <div *ngIf="currentSection === 'gis'" id="gis" class="content-item">
+      <div class="wraper">
+        <div class="hilight"></div>
+        <h2>Geographic Information Systems (GIS) Services</h2>
+      </div>
+      <p>Our GIS services offer comprehensive support for:</p>
+      <ul>
+        <li>Server GIS solutions for large data management</li>
+        <li>Database integration with ArcSDE, Oracle, and SQL</li>
+        <li>
+          Custom GIS application development to meet diverse system standards
+        </li>
+        <li>
+          Solutions that facilitate the distribution of critical geospatial data
+        </li>
+      </ul>
+      <p>
+        We apply proven methods and standards, integrating GIS capabilities to
+        enhance operational insights and provide powerful analytics.
+      </p>
+    </div>
+    <div *ngIf="currentSection === 'web'" id="web" class="content-item">
+      <div class="wraper">
+        <div class="hilight"></div>
+        <h2>Web Design & Software Development</h2>
+      </div>
+      <p>
+        Our web solutions focus on delivering user-centered, high-performance
+        websites that enhance digital engagement:
+      </p>
+      <ul>
+        <li>
+          Customized, responsive designs utilizing Adobe Photoshop, Dreamweaver,
+          and InDesign
+        </li>
+        <li>
+          Database-driven site development using Oracle, MySQL, and SQL Server
+        </li>
+        <li>Automated templating and rich HTML content generation</li>
+        <li>
+          Web 2.0 technologies for better collaboration and business
+          productivity
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="currentSection === 'cloud'" id="cloud" class="content-item">
+      <div class="wraper">
+        <div class="hilight"></div>
+        <h2>Cloud Computing Services</h2>
+      </div>
+      <p>
+        Kassys Group brings a strategic approach to cloud solutions, offering
+        end-to-end support:
+      </p>
+      <ul>
+        <li>Assessment of existing infrastructure for cloud suitability</li>
+        <li>
+          Migration planning with a focus on security, compliance, and
+          performance
+        </li>
+        <li>
+          Managed cloud services that enhance availability, security, and
+          cost-effectiveness
+        </li>
+      </ul>
+      <p>
+        With an eye on security and efficiency, our cloud migration strategies
+        are tailored to maximize your infrastructure’s value.
+      </p>
+    </div>
+    <div *ngIf="currentSection === 'bigdata'" id="bigdata" class="content-item">
+      <div class="wraper">
+        <div class="hilight"></div>
+        <h2>Big Data & Analytics</h2>
+      </div>
+      <p>Unlock insights with our Big Data services, which include:</p>
+      <ul>
+        <li>Predictive analytics and strategic consulting</li>
+        <li>
+          Business Intelligence solutions that enhance decision-making and
+          efficiency
+        </li>
+        <li>
+          Machine learning and AI-driven data exploration for actionable
+          insights
+        </li>
+      </ul>
+      <p>
+        Our analytics solutions turn raw data into valuable information,
+        supporting smarter, data-driven decisions for better performance and
+        strategic growth.
+      </p>
+    </div>
+    <div *ngIf="currentSection === 'project'" id="project" class="content-item">
+      <div class="wraper">
+        <div class="hilight "></div>
+        <h2>Project Management</h2>
+      </div>
+      <p>
+        Our project management services are led by certified professionals,
+        ensuring:
+      </p>
+      <ul>
+        <li>On-time, within-budget delivery across project phases</li>
+        <li>Risk mitigation and financial accountability</li>
+        <li>
+          Full project lifecycle support with a focus on knowledge transfer and
+          customer satisfaction
+        </li>
+      </ul>
+    </div>
+    <div
+      *ngIf="currentSection === 'training'"
+      id="training"
+      class="content-item"
+    >
+    <div class="wraper">
+      <div class="hilight"></div>
+      <h2>Technical Training Services</h2>
+    </div>
+      <p>
+        KasSys® provides customized training solutions to support skill
+        development across IT systems and applications, including training
+        plans, documentation, and on-site or virtual training sessions.
+      </p>
+      <p>
+        For each service, KasSys® Group ensures that our clients gain measurable
+        benefits, from operational efficiencies to long-term strategic
+        advantages.
+      </p>
+    </div>
+  </div>
+</div>

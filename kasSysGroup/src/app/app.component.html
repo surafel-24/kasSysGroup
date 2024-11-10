@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="header"><app-header></app-header></div>
+  
+  <div class="moto">Empowering Business <br/> Success <span class="moto-red">Since 1999</span> </div>
+  
+  <div class="image-container">
+    <img src="../assets/kassys_banner.jpg" alt="Rectangle Image" class="styled-image">
+  </div>
+  
+  <router-outlet></router-outlet>
+  
+  <!-- Chatbot Toggle Button -->
+  <button class="chatbot-toggle" (click)="toggleChatbot()">
+    <img src="../../assets/pngegg (2).png" alt="Chatbot Icon">
+    <span>KASSYS<br>BOT</span>
+  </button>
+  
+  <!-- Chatbot Component -->
+  <div class="bot" *ngIf="isChatbotVisible">
+    <app-chatbot></app-chatbot>
+  </div>
+  
+  <div class="footer"><app-footer></app-footer></div>
+</div>
