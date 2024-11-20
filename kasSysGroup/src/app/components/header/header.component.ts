@@ -13,14 +13,10 @@ export class HeaderComponent {
   constructor(private router: Router){}
   isMenuOpen: boolean = false;
 
-  toggleMenu(): void {
-    this.isMenuOpen = !this.isMenuOpen; // Toggle the boolean
-    const mobileMenu = document.querySelector('.nav-links-mobile');
-    if (mobileMenu) {
-      mobileMenu.classList.toggle('show-menu', this.isMenuOpen);
-    }
+   toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
   }
-
+  
   
   home(){
     this.router.navigate(['/']);

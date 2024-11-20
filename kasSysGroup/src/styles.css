@@ -9,8 +9,8 @@ body {
   font-family: 'Saira Condensed', sans-serif;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure body is at least the height of the viewport */
-  background-color: #f0f0f0; /* Set your desired background color */
+  min-height: 100vh;  
+  background-color: #f0f0f0; 
 }
 
 .btn {
@@ -19,10 +19,10 @@ body {
   color: rgb(0, 0, 0);
   border: none;
   cursor: pointer;
-  font-size: 1.5rem; /* Use rem for better scalability */
+  font-size: 1.5rem; 
   transition: background-color 0.3s ease;
-  min-width: 120px; /* Ensure a minimum width for better usability */
-  border-radius: 5px; /* Add border radius for a smoother look */
+  min-width: 120px;
+  border-radius: 5px; 
 }
 
 .btn:hover {
@@ -31,7 +31,7 @@ body {
 }
 
 .btn:focus {
-  outline: 2px solid #D9D9D9; /* Add focus outline for accessibility */
+  outline: 2px solid #D9D9D9;
 }
 
 .wraper {
@@ -46,7 +46,7 @@ body {
   width: 9px;
 }
 
-.description { /* Corrected from .discription to .description */
+.description {
   font-size: 1rem;
   color: #000000;
   margin-bottom: 30px;
@@ -56,22 +56,22 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .btn {
-      font-size: 1.2rem; /* Adjust button font size */
-      padding: 8px 16px; /* Adjust padding for smaller screens */
+      font-size: 1.2rem; 
+      padding: 8px 16px; 
   }
 
   .description {
-      font-size: 0.9rem; /* Adjust description font size */
+      font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
   .btn {
-      font-size: 1rem; /* Further adjust button font size */
-      padding: 6px 12px; /* Further adjust padding */
+      font-size: 1rem; 
+      padding: 6px 12px; 
   }
 
   .description {
-      font-size: 0.8rem; /* Further adjust description font size */
+      font-size: 0.8rem;
   }
 }

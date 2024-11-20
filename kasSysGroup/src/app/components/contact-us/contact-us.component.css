@@ -1,5 +1,7 @@
+/* Container Styling */
 .contact-us-container {
   display: flex;
+  flex-wrap: wrap; 
   justify-content: space-between;
   align-items: stretch; 
   gap: 40px; 
@@ -9,11 +11,12 @@
 
 /* Contact Form Section */
 .form-section {
-  flex: 1; 
+  flex: 1;
+  min-width: 300px; 
 }
 
 .contact-card {
-  background-color: rgba(217, 217, 217, 0.50); 
+  background-color: rgba(217, 217, 217, 0.50);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -27,6 +30,7 @@
   font-weight: bolder;
 }
 
+/* Form Group Styling */
 .form-group {
   margin-bottom: 20px;
 }
@@ -54,8 +58,9 @@ textarea {
 .btn {
   display: block;
   width: 100%;
-  padding: 12px;   
+  padding: 12px;
 }
+
 /* Contact Info Section */
 .contact-info {
   list-style-type: none;
@@ -66,7 +71,7 @@ textarea {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  margin-left: 60px;
+  margin-left: 20px; /* Reduced for better spacing */
 }
 
 /* Icon Circle Styling */
@@ -83,18 +88,20 @@ textarea {
 
 /* Image Styling */
 .icon-circle img {
-  width: 50%; /* Adjust size as needed */
+  width: 60%; /* Adjusted for better fit */
   height: auto;
 }
 
 /* Contact Info Text */
 .contact-info span {
-  font-size: 25px;
+  font-size: 1.1rem;
   color: #000000;
 }
- 
+
+/* Info Section */
 .info-section {
-  flex: 1; 
+  flex: 1;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -102,117 +109,105 @@ textarea {
 }
 
 .info-section h2 {
-  font-size: 1.8rem;
+  font-size: 2.5rem; /* Adjusted for larger screens */
   font-weight: bolder;
-  font-size: 60px;
-}
-/*
+  margin-bottom: 20px;
+  margin-top: 15px;
 
-.contact-info {
-  list-style-type: none;
-  padding: 0;
 }
 
-.contact-info li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  margin-left: 60px;
-}
-
-.icon-circle {
-  width: 75px;
-  height: 75px;
-  background-color: #d9d9d9;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 15px;
-}
-
-.icon-circle i {
-  color: #000000;
-  font-size: 20px;
-}
-
-.contact-info span {
-  font-size: 25px;
-  color: #000000;
-} */
-
+/* Highlight Styling */
 .hilight {
   height: 43px;
   margin-top: 24px;
 }
 
-/* Media Queries for Responsiveness */
+/* Map Section Styling */
+.map-section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.map-section iframe {
+  width: 100%; 
+  max-width: 1000px; /* Limit max size */
+  height: 300px; 
+  border: 2px solid #ccc; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; 
+}
+
+/* Media Queries for Better Responsiveness */
 @media (max-width: 1024px) {
   .contact-us-container {
     flex-direction: column;
-    padding: 20px;
-}
+    padding: 30px;
+    gap: 20px;
+  }
 
-.contact-card h2 {
-    font-size: 1.5rem;
-}
+  .contact-info span {
+    font-size: 1rem;
+  }
 
-.info-section h2 {
-    font-size: 2.5rem;
-}
-
-.contact-info span {
-    font-size: 20px;
-}
-
-.contact-info li {
-    margin-left: 0;
-    justify-content: center;
-}
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 @media (max-width: 768px) {
   .contact-us-container {
-    padding: 15px;
-}
-
-.contact-card {
     padding: 20px;
-}
+  }
 
-.contact-card h2 {
-    font-size: 1.3rem;
-}
+  .contact-card {
+    padding: 25px;
+  }
 
-.form-group input,
-.form-group textarea {
+  /* .contact-card h2 {
+    font-size: 1.4rem;
+  } */
+
+  .form-group input,
+  .form-group textarea {
     font-size: 0.9rem;
-}
+  }
 
-.contact-info span {
-    font-size: 18px;
-}
+  .contact-info span {
+    font-size: 0.95rem;
+  }
 
-.icon-circle {
-    width: 50px;
-    height: 50px;
-}
-
-.icon-circle img {
-    width: 60%; /* Adjust size as needed */
-}
+  .icon-circle {
+    width: 55px;
+    height: 55px;
+  }
 }
 
 @media (max-width: 480px) {
-  .contact-card h2 {
+  .contact-us-container {
+    padding: 15px;
+  }
+
+  /* .contact-card h2 {
     font-size: 1.2rem;
-}
+  } */
 
-.info-section h2 {
-    font-size: 2rem;
-}
+  .info-section h2 {
+    font-size: 1.8rem;
+  }
 
-.contact-info span {
-    font-size: 16px;
-}
+  .contact-info span {
+    font-size: 0.85rem;
+  }
+
+  .icon-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .map-section iframe {
+    height: 250px; /* Reduced height for smaller screens */
+  }
 }

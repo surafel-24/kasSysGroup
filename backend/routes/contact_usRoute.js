@@ -1,35 +1,51 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const router = express.Router();
+const connection = require('../data/db');
 
 router.post('/', (req, res) => {
     const { name, email, message, subject } = req.body;
-  
-    // Nodemailer configuration
+
+    // Set up nodemailer transport
     const transporter = nodemailer.createTransport({
-      service: 'gmail',  // Or any other email service
-      auth: {
-        user: 'surafelnega23@gmail.com',  // Your email
-        pass: 'somepass',  // Your email password
-      },
+        host: 'smtp.gmail.com',
+        port: 587,
+        secure: false,
+        auth: {
+            user: 'surafelnega23@gmail.com',
+            pass: 'c l w n s b d e d z u c u u j l', // Use the App Password here
+        },
     });
-  
+
+    // Email options
     const mailOptions = {
-      from: email,
-      to: 'surafelnegaa@gmail.com',  // Your receiving email address
-      subject: subject,
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+        from: email,
+        to: 'surafelnega23@gmail.com', // Your receiving email address
+        subject: subject,
+        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };
-  
+
+    // Send the email
     transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.log(error);
-        res.status(500).send('Error sending email');
-      } else {
-        console.log('Email sent: ' + info.response);
-        res.status(200).send('Email sent successfully');
-      }
+        if (error) {
+            console.log('Email Error:', error);
+            res.status(500).send('Error sending email');
+        } else {
+            console.log('Email sent: ' + info.response);
+
+            // Insert contact form data into the database
+            const sql = 'INSERT INTO contacts (name, email, subject, message) VALUES (?, ?, ?, ?)';
+            connection.query(sql, [name, email, subject, message], (err, results) => {
+                if (err) {
+                    console.log('Database Error:', err);
+                    res.status(500).send('Error saving to database');
+                } else {
+                    console.log('Data saved to database:', results);
+                    res.status(200).json({ message: 'Email sent and data saved successfully' });
+                }
+            });
+        }
     });
-  });
+});
 
 module.exports = router;

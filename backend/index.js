@@ -5,9 +5,11 @@ const path = require('path');
 const contact_usRoute = require('./routes/contact_usRoute')
 const newsRoutes = require('./routes/newsRoutes')
 const announcementRoute = require('./routes/announcementRoute');
+require('dotenv').config();
+
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 4000;
 
 // Middleware
 app.use(cors());

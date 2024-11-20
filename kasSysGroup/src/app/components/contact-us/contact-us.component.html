@@ -6,8 +6,8 @@
       <h2>CONTACT US</h2>
     </div>
     <p class="discription">
-      Discover how Kassys Group, Inc. can transform your IT operations and
-      drive measurable results. Contact us KasSys® Group Inc.
+      Discover how Kassys Group, Inc. can transform your IT operations and drive
+      measurable results. Contact us KasSys® Group Inc.
     </p>
     <ul class="contact-info">
       <li>
@@ -32,9 +32,7 @@
         <div class="icon-circle">
           <img src="../../../assets/location.png" alt="Location Icon" />
         </div>
-        <span>
-          8230 Boone Blvd. Suite 210 Vienna, VA 22182
-        </span>
+        <span>8230 Boone Blvd. Suite 210 Vienna, VA 22182</span>
       </li>
     </ul>
   </div>
@@ -43,25 +41,78 @@
   <div class="form-section">
     <div class="contact-card">
       <h2>Get in Touch</h2>
-      <form (submit)="onSubmit()">
+      <!-- Form with validation and reset -->
+      <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
         <div class="form-group">
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name" [(ngModel)]="name" placeholder="Enter your name" required />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            [(ngModel)]="name"
+            placeholder="Enter your name"
+            required
+            #nameModel="ngModel"
+          />
+          <div *ngIf="nameModel.invalid && nameModel.touched" class="error">
+            Name is required.
+          </div>
         </div>
       
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" [(ngModel)]="email" placeholder="Enter your email" required />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            [(ngModel)]="email"
+            placeholder="Enter your email"
+            required
+            email
+            #emailModel="ngModel"
+          />
+          <div *ngIf="emailModel.invalid && emailModel.touched" class="error">
+            A valid email is required.
+          </div>
         </div>
       
         <div class="form-group">
           <label for="message">Message:</label>
-          <textarea id="message" name="message" [(ngModel)]="message" rows="5" placeholder="Enter your message" required></textarea>
+          <textarea
+            id="message"
+            name="message"
+            [(ngModel)]="message"
+            rows="5"
+            placeholder="Enter your message"
+            required
+            #messageModel="ngModel"
+          ></textarea>
+          <div *ngIf="messageModel.invalid && messageModel.touched" class="error">
+            Message is required.
+          </div>
         </div>
       
-        <button type="submit" class="btn">Submit</button>
+        <button type="submit" class="btn" [disabled]="contactForm.invalid">Submit</button>
       </form>
       
     </div>
   </div>
+</div>
+
+<!-- <re-captcha 
+  [siteKey]="siteKey" 
+  (resolved)="excuteRecaptcha($event)">
+</re-captcha> -->
+
+<!-- Map Section -->
+<div class="map-section">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.343695250263!2d-77.23271262524415!3d38.916121145601025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b64afac1456223%3A0x4104bb696482eecd!2s8230%20Boone%20Blvd%20STE%20210%2C%20Vienna%2C%20VA%2022182%2C%20USA!5e0!3m2!1sen!2set!4v1731533246793!5m2!1sen!2set"
+    width="100%"
+    height="450"
+    style="border: 0"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe> 
 </div>
