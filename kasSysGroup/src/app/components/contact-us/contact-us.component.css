@@ -74,48 +74,6 @@ textarea {
   margin-left: 20px; /* Reduced for better spacing */
 }
 
-/* Icon Circle Styling */
-.icon-circle {
-  width: 75px;
-  height: 75px;
-  background-color: #d9d9d9;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 15px;
-}
-
-/* Image Styling */
-.icon-circle img {
-  width: 60%; /* Adjusted for better fit */
-  height: auto;
-}
-
-/* Contact Info Text */
-.contact-info span {
-  font-size: 1.1rem;
-  color: #000000;
-}
-
-/* Info Section */
-.info-section {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-align: left;
-}
-
-.info-section h2 {
-  font-size: 2.5rem; /* Adjusted for larger screens */
-  font-weight: bolder;
-  margin-bottom: 20px;
-  margin-top: 15px;
-
-}
-
 /* Highlight Styling */
 .hilight {
   height: 43px;
