@@ -12,7 +12,7 @@ router.post('/', (req, res) => {
         port: 587,
         secure: false,
         auth: {
-            user: 'surafelnega23@gmail.com',
+            user: 'contact@KasSys®group.com',
             pass: 'c l w n s b d e d z u c u u j l', // Use the App Password here
         },
     });
@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
     // Email options
     const mailOptions = {
         from: email,
-        to: 'surafelnega23@gmail.com', // Your receiving email address
+        to: 'contact@KasSys®group.com', // Your receiving email address
         subject: subject,
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };
