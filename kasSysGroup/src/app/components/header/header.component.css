@@ -103,7 +103,7 @@
 }
 
 .nav-links-mobile.show-menu {
-  display: flex; /* Make it a flexbox to display items */
+  display: flex; 
 }
 
 .mobile-dropdown{

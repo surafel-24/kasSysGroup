@@ -36,4 +36,10 @@ export class FooterComponent {
   login(){
     this.router.navigate(['events/login']);
   }
+  products(){
+    this.router.navigate(['/products']);
+   }
+   career(){
+   this.router.navigate(['/career']);
+   }
 }

@@ -1,0 +1,118 @@
+.career-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin: 60px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #000000;
+  display: flex;
+  font-weight: bolder;
+}
+
+.career-header {
+  display: flex;
+  align-items: start;
+  gap: 200px;
+  padding: 60px;
+}
+
+.content-image img {
+  width: 600px;
+  height: 600px;
+  border-radius: 8px;
+}
+
+.career-text h2 {
+  color: #000000;
+  font-weight: bolder;
+}
+
+.career-text p,
+.career-text li {
+  font-size: 25px;
+  color: #000000;
+}
+
+.career-section ul {
+  color: #000000;
+  list-style-type: none;
+}
+
+.career-call-to-action {
+  margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .career-header {
+    gap: 100px; 
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 2.5rem; 
+  }
+
+  .content-image img {
+    width: 100%; 
+    height: auto; 
+  }
+
+  .career-text p,
+  .career-text li {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .career-header {
+    flex-direction: column; 
+    gap: 20px;
+    padding: 20px; 
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .career-text {
+    text-align: center; 
+  }
+
+  .career-text p,
+  .career-text li {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .content-image img {
+    width: 100%; 
+    height: auto;
+  }
+
+  .career-text p,
+  .career-text li {
+    font-size: 18px; 
+  }
+
+  .career-call-to-action {
+    text-align: center;
+    margin-top: 30px; 
+  }
+}

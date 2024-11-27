@@ -45,6 +45,9 @@ export class HeaderComponent {
   products(){
    this.router.navigate(['/products']);
   }
+  career(){
+  this.router.navigate(['/career']);
+  }
 }
 
 

@@ -75,17 +75,6 @@
   padding: 5px 0;
 }
 
-
-/* @media (max-width: 768px) {
-  .dropdown-section, .content-section {
-    max-width: 100%;
-    padding: 15px;
-  }
-  .service-container {
-    flex-direction: column;
-    gap: 15px;
-  }
-} */
 /* Responsive layout adjustment for tablets and smaller screens */
 @media (max-width: 1024px) {
   .service-container {

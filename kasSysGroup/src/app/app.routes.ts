@@ -9,6 +9,7 @@ import { NewsComponent } from './components/events/news/news.component';
 import { LoginComponent } from './components/events/login/login.component';
 import { EventsComponent } from './components/events/events.component';
 import { ProductsComponent } from './components/products/products.component';
+import { CareerComponent } from './components/career/career.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent }, 
@@ -17,6 +18,7 @@ export const routes: Routes = [
     {path: 'about', component: AboutComponent},
     {path: 'partners', component: PartnersComponent},
     {path: 'products', component: ProductsComponent},
+    {path: 'career', component: CareerComponent},
     { path: 'events', component: EventsComponent, pathMatch: 'full' },
     { path: 'events', children: [
         { path: 'announcement', component: AnnouncementComponent },
