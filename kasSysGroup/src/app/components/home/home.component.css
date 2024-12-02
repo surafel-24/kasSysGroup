@@ -1,4 +1,3 @@
-/* Content Section Styling */
 .content-section {
   margin-top: 50px;
   display: flex;
@@ -25,8 +24,8 @@
 
 .content-text h2 {
   font-size: 50px;
-  color: #000000; 
-  line-height: 1.2; 
+  color: #000000;
+  line-height: 1.2;
 }
 
 .content-text p {
@@ -38,50 +37,58 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
   .content-item {
-      padding: 40px; 
-      flex-direction: column;
+    padding: 40px;
+    flex-direction: column;
   }
 
   .content-text h2 {
-      font-size: 40px; 
+    font-size: 40px;
   }
 
   .content-text p {
-      font-size: 22px;
+    font-size: 22px;
   }
+    /* Reorder image to appear before paragraph */
+    .content-item.reverse {
+      flex-direction: column-reverse;
+    }
+  
+    .content-item.reverse .content-image {
+      order: 1;
+    }
 }
 
 @media (max-width: 768px) {
   .content-item {
-      flex-direction: column; 
-      padding: 20px; 
-      gap: 20px;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
   }
 
   .content-image img {
-      width: 100%; 
-      height: auto; 
+    width: 100%;
+    height: auto;
   }
 
   .content-text {
-      max-width: 100%; 
+    max-width: 100%;
   }
 
   .content-text h2 {
-      font-size: 30px; 
+    font-size: 30px;
   }
 
   .content-text p {
-      font-size: 20px; 
+    font-size: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .content-text h2 {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   .content-text p {
-      font-size: 18px; 
+    font-size: 18px;
   }
 }

@@ -1,20 +1,21 @@
 .footer {
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center;
-  background-color: #D9D9D9; 
-  padding: 20px 40px; 
-  color: #000000; 
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #D9D9D9;
+  padding: 20px 40px;
+  color: #000000;
   font-weight: bold;
 }
 
 .footer-section {
-  flex: 1; 
+  flex: 1 0 45%;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .company-name {
-  font-size: 60px;
+  font-size: 2rem; 
   font-weight: bolder;
 }
 
@@ -22,49 +23,50 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: start;
 }
 
 .logo {
-  max-width: 150px; 
+  max-width: 150px;
   height: auto;
 }
 
 .motto {
   margin-top: 10px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-style: italic;
+  text-align: start;
 }
 
 .footer-links ul {
   list-style-type: none;
-  padding-left: 100px;
+  padding: 0;
 }
 
 .footer-links ul li {
   margin-bottom: 8px;
   cursor: pointer;
+  text-align: start;
+  margin-right: 15px;
 }
 
 .footer-links ul li a {
   text-decoration: none;
-  color: #000000; 
+  color: #000000;
 }
 
 .footer-links ul li a:hover {
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 .contact-info p {
   margin: 5px 0;
-  padding-left: 200px;
   text-align: start;
 }
-
 
 /* Dropdown Menu */
 .dropdown {
   cursor: pointer;
+  position: relative; 
 }
 
 .dropdown-icon {
@@ -74,19 +76,24 @@
 
 .dropdown-content {
   display: none;
+  position: absolute;
+  background-color: #817f7fe7;
+  border-radius: 5px;
+  z-index: 1;
+  padding: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
-
-
 .dropdown-content a {
-  padding-right: 100px;
-  font-size: 20px;
+  padding: 5px 10px;
+  font-size: 16px;
   color: #000;
   display: block;
 }
 
 .dropdown-content a:hover {
-  color: #000;
+  color: #008cba;
+  background-color: #f0f0f0; 
 }
 
 .dropdown:hover .dropdown-content {
@@ -96,52 +103,60 @@
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
   .company-name {
-      font-size: 48px; 
+    font-size: 1.8rem;
   }
 
   .motto {
-      font-size: 1rem; 
+    font-size: 0.9rem;
   }
 
-  .footer-links ul {
-      padding-left: 100px; 
+  .footer-links ul li {
+    margin-right: 10px;
   }
 }
 
 @media (max-width: 768px) {
   .footer {
-      flex-direction: column; 
-      text-align: center;
-      padding: 20px; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
   }
 
   .footer-section {
-      margin-bottom: 20px;
-      padding-left: 0; 
-      padding-right: 0; 
+    flex: 1 0 45%; 
+    margin-bottom: 20px;
   }
 
   .footer-links ul {
-      padding-left: 0;
-      flex-direction: column; 
-      align-items: center; 
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-links ul li {
-      margin-bottom: 5px;
+    margin-bottom: 5px;
+    margin-right: 0;
   }
 
   .contact-info p {
-      padding-left: 0; 
+    padding-left: 10px;
+  }
+  .logo {
+    max-width: 125px;
   }
 }
 
 @media (max-width: 480px) {
+
   .company-name {
-      font-size: 36px; 
+    font-size: 1.6rem;
   }
 
   .motto {
-      font-size: 0.9rem; 
+    font-size: 0.8rem;
+  }
+  .logo {
+    max-width: 100px;
   }
 }
