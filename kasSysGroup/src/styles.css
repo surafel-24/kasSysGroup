@@ -25,10 +25,6 @@ body {
   border-radius: 5px; 
 }
 
-
-/* Dropdown Menu */
-/*  */
-/* Mobile Menu */
 .mobile-menu-icon {
   display: none;
   font-size: 30px;
@@ -42,10 +38,10 @@ body {
   display: none;
   top: 100%;
   left: 0;
-  background-color: rgba(217, 217, 217, 0.6);
+  background-color: rgba(217, 217, 217, 0.8);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   z-index: 1;
-  min-width: 300px;
+  min-width: 250px;
   border-radius: 5px;
   padding: 10px;
   flex-direction: column; 
@@ -63,6 +59,7 @@ body {
   padding: 5px 10px;
   display: block;
   text-align: start;
+  margin-left: 15px;
 }
 .nav-links-mobile a:hover{
 background-color: #d9d9d9;
@@ -254,5 +251,8 @@ color: #000;
 
   .description {
       font-size: 0.8rem;
+  }
+  .nav-links-mobile{
+    min-width: 150;
   }
 }

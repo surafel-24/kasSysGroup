@@ -102,9 +102,7 @@
   display: block;
 }
 
-.nav-links-mobile.show-menu {
-  display: flex; 
-}
+
 
 .mobile-dropdown{
   position: relative;
@@ -132,6 +130,9 @@
   .chatbot span {
     font-size: 0.9rem;
   }
+  .nav-links-mobile.show-menu {
+    display: none; 
+  }
 }
 
 @media (max-width: 768px) {
@@ -145,7 +146,7 @@
 
   .mobile-menu-icon {
     display: block;
-    margin-left: auto;
+    margin-left: 300px;
   }
 
   .header-left,
@@ -167,7 +168,10 @@
     padding: 10px 0;
   }
   .nav-links-mobile {
-    display: flex; /* Show on small screens */
+    display: flex; 
+  }
+  .nav-links-mobile.show-menu {
+    display: flex; 
   }
 }
 
