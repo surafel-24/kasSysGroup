@@ -19,9 +19,9 @@ export const routes: Routes = [
     {path: 'partners', component: PartnersComponent},
     {path: 'products', component: ProductsComponent},
     {path: 'career', component: CareerComponent},
-    { path: 'events', component: EventsComponent, pathMatch: 'full' },
-    { path: 'events', children: [
-        { path: 'announcement', component: AnnouncementComponent },
+    { path: 'events', component: EventsComponent,  
+      children: [
+        { path: 'announcement', component: AnnouncementComponent, pathMatch: 'full' },
         { path: 'news', component: NewsComponent },
         { path: 'news/:id', component: NewsComponent },
         { path: 'login', component: LoginComponent },

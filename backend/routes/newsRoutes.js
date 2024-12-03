@@ -88,9 +88,7 @@ router.get("/:id/comments", (req, res) => {
       if (results.length === 0) return res.status(404).json({ message: "Article not found" });
       
       // Parse comments, using an empty array if comments are NULL
-      const comments = results[0].comments ? JSON.parse(results[0].comments) : [];
-      console.log(comments)
-      
+      const comments = results[0].comments ? JSON.parse(results[0].comments) : [];      
       res.json({ comments });
     }
   );
