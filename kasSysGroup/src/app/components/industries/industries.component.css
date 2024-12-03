@@ -1,0 +1,176 @@
+/* Base Styles */
+.industries-container {
+    padding: 60px 20px;
+  }
+  
+  .container {
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .page-title {
+    font-size: 3rem;
+    margin-bottom: 40px;
+  }
+  
+  .industry-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensure wrapping for smaller screens */
+  }
+  
+  .industry-category {
+    width: 40%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    flex: 1 1 300px;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .hilight {
+    height: 24px;
+    margin-top: 8px;
+  }
+  
+  .big {
+    height: 40px;
+    margin-top: 15px;
+  }
+  
+  .career-container {
+    line-height: 1.6;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    margin: 60px;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #000000;
+    display: flex;
+    font-weight: bolder;
+  }
+  
+  .career-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 200px;
+    padding: 60px;
+  }
+  
+  .content-image img {
+    width: 600px;
+    height: 600px;
+    border-radius: 8px;
+  }
+
+  
+  .career-text h2 {
+    color: #000000;
+    font-weight: bolder;
+    font-size: 1.8rem;   
+  }
+  
+  .career-text p,
+  .career-text li {
+    color: #000000;
+    font-size: 1.35rem; 
+    line-height: 1.5;
+  }
+  
+  .career-section ul {
+    color: #000000;
+    list-style-type: none;
+  }
+  
+  .career-call-to-action {
+    margin-top: 50px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .career-header {
+        display: flex;
+      flex-direction: column;
+      gap: 30px; 
+    }
+
+    .career-text {
+        order: 1;
+      }
+      
+      .content-image {
+        order: 2;
+      }
+  
+    .content-image img {
+      width: 100%; 
+      height: auto; 
+    }
+  
+    .industry-category {
+      width: 100%; 
+    }
+  
+    .header {
+      margin: 20px; 
+    }
+  
+    h1 {
+      font-size: 2rem; 
+    }
+  
+    .page-title {
+      font-size: 2rem; 
+    }
+  
+    .career-header.reverse .content-image {
+      order: 2;
+    }
+  
+    .career-header.reverse .career-text {
+      order: 1; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .career-text p,
+    .career-text li {
+      font-size: 18px; 
+    }
+  
+    h1,
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .content-image img {
+      height: auto; 
+    }
+  
+    .career-header {
+      padding: 20px; 
+    }
+  }
+  

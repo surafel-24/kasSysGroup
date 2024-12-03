@@ -64,6 +64,9 @@ onWindowScroll() {
   career(){
   this.router.navigate(['/career']);
   }
+  industries(){
+    this.router.navigate(['/industries']);
+    }
 }
 
 
