@@ -78,7 +78,7 @@ align-items: center;
 }
 
 .moto {
-  z-index: 2;
+  z-index: 1;
   color: #000000;
   font-size: 3.75rem; 
   background-color: transparent;
